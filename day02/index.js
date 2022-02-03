@@ -15,26 +15,26 @@ let depth = 0;
 let horizontalPosition = 0;
 let aim = 0;
 
-for (let i = 0; i < inputArray.length; i++) {
+for(let i = 0; i < inputArray.length; i++) {
   const command = inputArray[i];
   const [direction, amountString] = command.split(' ');
   const amount = parseInt(amountString);
 
   
-  switch (direction) {
+  switch(direction) {
     case 'forward':
       horizontalPosition = horizontalPosition + amount;
       depth = depth + (aim * amount);
       break;
-      case 'down':
-        aim = aim + amount;
-        break;
-        case 'up':
-          aim = aim - amount;
-          break;
-          default:
-            break;
-          }
+    case 'down':
+      aim = aim + amount;
+      break;
+    case 'up':
+      aim = aim - amount;
+      break;
+    default:
+      break;
+  }
   // console.log(i, command, 'depth:', depth, 'h:', horizontalPosition, 'aim:', aim)
 }
 

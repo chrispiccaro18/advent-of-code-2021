@@ -17,7 +17,7 @@ let increases = 0;
 let previousWindow = 0;
 
 // loop through array
-for (let i = 0; i < inputArray.length; i++) {
+for(let i = 0; i < inputArray.length; i++) {
   // add i + (i+1) + (i+2)
   const currentWindow = inputArray[i] + inputArray[i + 1] + inputArray[i + 2];
 
